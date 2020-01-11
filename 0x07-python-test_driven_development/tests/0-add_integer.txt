@@ -1,0 +1,42 @@
+Import 'add_integer'from '0-add_integer' module
+>>> add_integer = __import__("0-add_integer").add_integer
+
+must calculating two positive integers correctly
+>>> add_integer(3, 4)
+7
+
+must calculating two negative integers correctly
+>>> add_integer(-3, -2)
+-5
+
+must add negative integer a and positive integer b
+>>> add_integer(-2, 5)
+3
+
+must add positive integer b and negtaive integer b
+>>> add_integer(2, -5)
+-3
+
+must raising error for wrong type of a
+>>> add_integer("k", 2)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+must raising error for wrong type of b
+>>> add_integer(6, "s")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+must return int number of adding two floats
+>>> add_integer(2.0, 7.1)
+9
+
+must return int number of adding a as  float and b as  integer
+>>> add_integer(4.1, 1)
+5
+
+must return int number of adding a  as  integer and b as float
+>>> add_integer(3, 5.1)
+8
