@@ -3,13 +3,13 @@
 '''
 This module contains the function
 add_integer(a, b) that adds two integers
+and return an integer number
 '''
 
 
 def add_integer(a, b=98):
     '''
-    This function return the sum of two integers , cast arguments to int
-    if a or b is float
+    This function return the sum of two integers.
     '''
     if type(a) is not int and type(a) is not float:
         raise TypeError("a must be an integer")
