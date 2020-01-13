@@ -1,0 +1,29 @@
+Import 'text_indentation' from '5-text_indentation'
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+passing a string
+>>> text_indentation("khalil.sdiri")
+khalil.
+<BLANKLINE>
+sdiri
+
+passing a string with different characters
+>>> text_indentation("how? are you. today:")
+how?
+<BLANKLINE>
+are you.
+<BLANKLINE>
+today:
+<BLANKLINE>
+
+passing wrong : type
+>>> text_indentation(6)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+passing wrong : type
+>>> text_indentation([])
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
