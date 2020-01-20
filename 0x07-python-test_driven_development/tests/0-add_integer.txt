@@ -51,7 +51,11 @@ Traceback (most recent call last):
 TypeError: a must be an integer
 
 must raising error
->>> add_integer(float('nan'))
+>>> add_integer(4,float('NaN'))
 Traceback (most recent call last):
     ...
 ValueError: cannot convert float NaN to integer
+
+must raise error if one arg is passed
+>>> add_integer(5)
+103
