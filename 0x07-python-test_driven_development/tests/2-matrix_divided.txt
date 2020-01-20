@@ -58,3 +58,13 @@ passing non valid list mix int float string
 Traceback (most recent call last):
     ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+division by infinity:
+>>> matrix_divided([[1], [2], [3]], float('inf'))
+[[0.0], [0.0], [0.0]]
+
+
+
+passing float
+>>> matrix_divided([[0, 0, 4], [0, 4, 6]], float('inf'))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
