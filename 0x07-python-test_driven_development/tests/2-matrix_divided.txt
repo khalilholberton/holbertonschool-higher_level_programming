@@ -22,3 +22,27 @@ passing string to the matrix instead of int
 Traceback (most recent call last):
     ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+passing one argument
+>>> matrix_divided(None, 5)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+must raise error
+>>> matrix_divided({}, 9)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+must raise error if a str is passed
+>>> matrix_divided('khalil', 1)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+must raise error
+>>> matrix_divided([[5, 6, 7], [1, 3, 7], [9, 8, 2]], None)
+Traceback (most recent call last):
+    ...
+TypeError: unsupported operand type(s) for /: 'int' and 'NoneType'
