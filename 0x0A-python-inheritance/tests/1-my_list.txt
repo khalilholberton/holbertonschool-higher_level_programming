@@ -1,0 +1,34 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> l = MyList()
+>>> l.append(2)
+>>> l.append(-7)
+>>> print(l)
+[2, -7]
+
+>>> l = MyList()
+>>> l.append(-2)
+>>> l.append(-3)
+>>> l.append(-4)
+>>> l.append(-5)
+>>> print(l)
+[-2, -3, -4, -5]
+>>> l.print_sorted()
+[-5, -4, -3, -2]
+
+>>> l = MyList()
+>>> l.append(4)
+>>> l.append(3)
+>>> l.append(2)
+>>> l.append(1)
+>>> l.print_sorted()
+[1, 2, 3, 4]
+
+>>> l = MyList()
+>>> l.print_sorted()
+[]
+
+>>> l.print_sorted(5)
+Traceback (most recent call last):
+...
+TypeError: print_sorted() takes 1 positional argument but 2 were given
