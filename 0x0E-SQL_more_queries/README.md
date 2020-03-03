@@ -1,0 +1,1 @@
+SQL_more_queries - privileges of the MySQL users
