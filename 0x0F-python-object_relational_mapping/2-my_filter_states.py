@@ -10,12 +10,12 @@ if __name__ == "__main__":
                          user=argv[1],
                          passwd=argv[2],
                          db=argv[3])
-    cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE '{}' ORDER BY id ASC"
+    c = db.cursor()
+    c.execute("SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC"
                 .format(argv[4]))
-    rows = cur.fetchall()
+    rows = c.fetchall()
     for row in rows:
         print(row)
 
-    cur.close()
+    c.close()
     db.close()
