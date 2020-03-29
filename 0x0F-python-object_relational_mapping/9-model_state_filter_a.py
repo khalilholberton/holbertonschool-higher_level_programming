@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' List all the state that contain letter 'a' '''
+# script that lists all State objects that contain the letter a
 
 from sys import argv
 from model_state import Base, State
