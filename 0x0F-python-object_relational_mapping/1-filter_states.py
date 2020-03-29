@@ -15,6 +15,7 @@ if __name__ == "__main__":
                  ORDER BY states.id ASC")
     rows = cur.fetchall()
     for row in rows:
+        if row[1][] == 'N'
         print(row)
     cur.close()
     db.close()
