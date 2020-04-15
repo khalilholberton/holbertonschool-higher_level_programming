@@ -10,10 +10,10 @@ from sys import argv
 if __name__ == "__main__":
     url = argv[1]
     email = argv[2]
-    data = {"email" : email}
+    data = {"email": email}
     values = urllib.parse.urlencode(data)
-    values = values.encode("ascii") # data should be bytes
-    req  = urllib.request.Request(url, values)
+    values = values.encode("ascii")  # data should be bytes
+    req = urllib.request.Request(url, values)
     with urllib.request.urlopen(req) as response:
         the_page = response.read()
         print(the_page.decode("utf-8"))
