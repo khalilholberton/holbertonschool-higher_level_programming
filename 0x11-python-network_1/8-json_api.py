@@ -10,9 +10,9 @@ if __name__ == "__main__":
     try:
         q = sys.argv[1]
     except:
-        q =""
+        q = ""
     try:
-        r = requests.post('http://0.0.0.0:5000/search_user', data = {"q": q})
+        r = requests.post('http://0.0.0.0:5000/search_user', data={"q": q})
         r = r.json()
         if r.get("id") is None or r.get("name") is None:
             print("No result")
