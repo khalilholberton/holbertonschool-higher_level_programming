@@ -7,16 +7,13 @@ import requests
 import sys
 
 if __name__ == "__main__":
+    q = argv[1] if len(argv) > 1 else ""
     try:
-        q = sys.argv[1]
-    except:
-        q = ""
-    try:
-        r = requests.post('http://0.0.0.0:5000/search_user', data={"q": q})
+        r = requests.post('http://0.0.0.0:5000/search_user', data={'q': q})
         r = r.json()
-        if r.get("id") is None or r.get("name") is None:
-            print("No result")
+        if 'id' in r and 'name' in r:
+            print("[{}] {}".format(r['id'], r['name']))
         else:
-            print("[{}] <{}>".format(r['id'], r['name']))
+            print("No result")
     except ValueError:
         print("Not a valid JSON")
