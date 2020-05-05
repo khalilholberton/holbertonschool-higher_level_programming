@@ -10,5 +10,4 @@ function factorial (a) {
   }
 }
 
-
 console.log(factorial(parseInt(myarg)));
